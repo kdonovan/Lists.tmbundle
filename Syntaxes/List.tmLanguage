@@ -27,10 +27,19 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?x)
-			\s*(( (https?|s?ftp|ftps|file|smb|afp|nfs|(x-)?man|gopher|txmt)://|mailto:)
-			[-:@a-zA-Z0-9_.,~%+/?=&amp;#]+(?&lt;![.,?:])
-			)</string>
+			<string>.*(https?://\S+).*</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\s*[-_]{3,}\s*\n</string>
+			<key>name</key>
+			<string>comment.line.divider</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>::.*::</string>
+			<key>name</key>
+			<string>entity.name.section</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -62,14 +71,6 @@
 			<string>"</string>
 			<key>name</key>
 			<string>string.quoted.double.untitled</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>end</key>
-			<string>'</string>
-			<key>name</key>
-			<string>string.quoted.single.untitled</string>
 		</dict>
 		<dict>
 			<key>begin</key>
