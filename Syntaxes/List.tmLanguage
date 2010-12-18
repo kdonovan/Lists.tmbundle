@@ -43,6 +43,18 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>&gt;&gt;.+</string>
+			<key>name</key>
+			<string>invalid.illegal</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>&gt;.+</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>::.*::</string>
 			<key>name</key>
 			<string>entity.name.section</string>
