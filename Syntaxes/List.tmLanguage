@@ -18,16 +18,22 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>match</key>
+			<string>//.*</string>
+			<key>name</key>
+			<string>comment.line.double-slash</string>
+		</dict>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>markup.underline.link.text</string>
+					<string>comment.line.hash</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>.*(https?://\S+).*</string>
+			<string>.*(#.*)</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -59,12 +65,6 @@
 			<string>([^:]+):(.*)</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>//.*</string>
-			<key>name</key>
-			<string>comment.line.double-slash</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>"</string>
 			<key>end</key>
@@ -79,6 +79,18 @@
 			<string>\n</string>
 			<key>name</key>
 			<string>string.quoted.hyphen.untitled</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.underline.link.text</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>.*(https?://\S+).*</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
